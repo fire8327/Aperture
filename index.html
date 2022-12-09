@@ -8,8 +8,263 @@
     <link rel="stylesheet" href="Assets/CSS/custom.css">
     <title>Главная</title>
 </head>
-<body>
-    <header></header>
+<body class="bg-black">
+    <header class="w-full bg-header px-2">
+        <div class="container mx-auto flex justify-between py-6 items-center">
+            <div>
+                <img src="Assets/Images/header/logo.svg" alt="">
+            </div>
+            <div class="hidden lg:flex justify-around items-center">
+                <a href="" class="text-white mx-4 border-b-2 border-header hover:delay-200 transition-all duration-500 hover:border-white">Business areas</a>
+                <a href="" class="text-white mx-4 border-b-2 border-header hover:delay-200 transition-all duration-500 hover:border-white">Featured images</a>
+                <a href="" class="text-white mx-4 border-b-2 border-header hover:delay-200 transition-all duration-500 hover:border-white">Gear cage</a>
+                <a href="" class="text-white mx-4 border-b-2 border-header hover:delay-200 transition-all duration-500 hover:border-white">Contact</a>
+                <button class="bg-white mx-4 border-2 border-white rounded-xl px-5 py-1 hover:delay-200 transition-all duration-500 hover:bg-transparent hover:text-white">Get template</button>
+            </div>
+            <button class="flex bg-white rounded-xl items-center border-2 border-white px-3 lg:hidden group" id="toggler">
+                <p class="my-0.5 h-8 w-8 bg-black rounded-full mr-2 group-hover:delay-200 transition-all duration-500 group-hover:bg-white"></p>
+                <p class="font-bold">Menu</p>
+            </button>
+        </div>
+        <div class="w-full flex">
+            <div id="mobile__nav" class="bg-header fixed top-0 right-0 flex flex-col h-screen w-full md:w-1/2 pt-12 transform translate-x-full transition duration-300 ease-in-out z-30">
+                <svg id="toggler__expanded" class="text-white w-6 h-6 top-4 left-4 cursor-pointer ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+                <div class="flex flex-col h-full mt-4">
+                    <a href="" class="text-2xl mx-3 text-white my-2">Business areas</a>
+                    <a href="" class="text-2xl mx-3 text-white my-2">Featured images</a>
+                    <a href="" class="text-2xl mx-3 text-white my-2">Gear cage</a>
+                    <a href="" class="text-2xl mx-3 text-white my-2">Contact</a>
+                    <button class="w-fit bg-white border-2 border-white rounded-xl px-2 mx-2 text-2xl my-2">Get template</button>
+                </div>
+            </div>
+            <div class="w-full h-screen fixed top-0 right-0 hidden z-10 bg-gray-900 opacity-70" id="overlay"></div>
+        </div>
+    </header>
+
+    <div class="w-full flex flex-col justify-end items-center relative">
+        <img src="Assets/Images/photos/bg1.svg" alt="" class="w-full">
+        <div class="absolute bottom-2 lg:bottom-8 flex flex-col items-center w-full">
+            <p class="text-center text-silver">PHOTOGRAPHER & FILMMAKER</p>
+            <p class="text-4xl md:text-5xl text-center text-white">Aperture Studios</p>
+            <p class="mt-4 text-center w-full md:w-1/2 2xl:w-1/3 text-silver hidden md:flex">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+            
+            <div class="flex justify-center md:justify-end items-center w-full container mx-auto mt-4 md:mt-2">
+                <div class="flex h-4 md:mx-4 mx-2">
+                    <img src="Assets/Images/photos/1.svg" alt="">
+                    <p class="text-white mx-1"><sup>1/2000s</sup></p>
+                </div>
+                <div class="flex h-4 md:mx-4 mx-2">
+                    <img src="Assets/Images/photos/2.svg" alt="">
+                    <p class="text-white mx-1"><sup>f/11</p</sup>
+                </div>
+                <div class="flex h-4 md:mx-4 mx-2">
+                    <img src="Assets/Images/photos/3.svg" alt="">
+                    <p class="text-white mx-1"><sup>100</p></sup>
+                </div>
+                <div class="flex h-4 md:mx-4 mx-2">
+                    <img src="Assets/Images/photos/4.svg" alt="">
+                    <p class="text-white mx-1"><sup>Iceland</sup></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto p-2 mt-12 md:mt-28">
+        <div class="flex flex-col items-center">
+            <p class="text-4xl text-white text-center">What we do.</p>
+            <p class="text-2xl text-silver text-center">The areas that we're specialized in.</p>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 mt-10">
+            <div class="flex flex-col relative">
+                <img src="Assets/Images/what_we_do/1.svg" alt="" class="w-full">
+                <div class="absolute bottom-3 left-3 md:left-7 md:bottom-7">
+                    <p class="text-white">PRODUCT PHOTOGRAPHY</p>
+                    <p class="mt-7 text-silver w-full md:w-full hidden ml:flex">Cras commodo consequat orci, in convallis risus egestas non. Nulla efficitur auctor hendrerit. Etiam ut orci varius, faucibus libero ac, cursus quam.</p>
+                    <button class="group mt-4 ml:mt-8 flex bg-white rounded-xl items-center border-2 border-white px-3 hover:delay-200 transition-all duration-500 group hover:text-white hover:bg-transparent">
+                        <p class="my-0.5 h-8 w-8 bg-black rounded-full mr-2 group-hover:delay-200 transition-all duration-500 group-hover:bg-white"></p>
+                        <p class="font-bold">Read more</p>
+                    </button>
+                </div>
+            </div>
+            <div class="flex flex-col relative">
+                <img src="Assets/Images/what_we_do/2.svg" alt="" class="w-full">
+                <div class="absolute bottom-3 left-3 md:left-7 md:bottom-7">
+                    <p class="text-white">ARCHITECTURE PHOTOGRAPHY</p>
+                    <p class="mt-7 text-silver w-full md:w-full hidden ml:flex">Aenean porta neque eget consequat fringilla. Vestibulum ultrices, orci nec egestas pharetra, ligula est semper enim, nec auctor sapien leo nec purus. Fusce tincidunt aliquet sapien, sit amet rhoncus leo imperdiet nec.</p>
+                    <button class="group mt-4 ml:mt-8 flex bg-white rounded-xl items-center border-2 border-white px-3 hover:delay-200 transition-all duration-500 group hover:text-white hover:bg-transparent">
+                        <p class="my-0.5 h-8 w-8 bg-black rounded-full mr-2 group-hover:delay-200 transition-all duration-500 group-hover:bg-white"></p>
+                        <p class="font-bold">Read more</p>
+                    </button>
+                </div>
+            </div>
+            <div class="flex flex-col relative">
+                <img src="Assets/Images/what_we_do/3.svg" alt="" class="w-full">
+                <div class="absolute bottom-3 left-3 md:left-7 md:bottom-7">
+                    <p class="text-white">DRONE PHOTOGRAPHY</p>
+                    <p class="mt-7 text-silver w-full md:w-full hidden ml:flex">Mauris euismod elit et nisi ultrices, ut faucibus orci tincidunt. Duis tristique sed lorem a vestibulum. Cras commodo consequat orci, in convallis risus egestas non. Nulla efficitur auctor hendrerit. Etiam ut orci varius, faucibus libero ac, cursus quam.</p>
+                    <button class="group mt-4 ml:mt-8 flex bg-white rounded-xl items-center border-2 border-white px-3 hover:delay-200 transition-all duration-500 group hover:text-white hover:bg-transparent">
+                        <p class="my-0.5 h-8 w-8 bg-black rounded-full mr-2 group-hover:delay-200 transition-all duration-500 group-hover:bg-white"></p>
+                        <p class="font-bold">Read more</p>
+                    </button>
+                </div>
+            </div>
+            <div class="flex flex-col relative">
+                <img src="Assets/Images/what_we_do/4.svg" alt="" class="w-full">
+                <div class="absolute bottom-3 left-3 md:left-7 md:bottom-7">
+                    <p class="text-white">WILDLIFE PHOTOGRAPHY</p>
+                    <p class="mt-7 text-silver w-full md:w-full hidden ml:flex">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus. Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex, condimentum dapibus congue et, vulputate ut ligula. Vestibulum sit amet urna turpis.</p>
+                    <button class="group mt-4 ml:mt-8 flex bg-white rounded-xl items-center border-2 border-white px-3 hover:delay-200 transition-all duration-500 group hover:text-white hover:bg-transparent">
+                        <p class="my-0.5 h-8 w-8 bg-black rounded-full mr-2 group-hover:delay-200 transition-all duration-500 group-hover:bg-white"></p>
+                        <p class="font-bold">Read more</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full flex flex-col items-center relative mt-12 md:mt-24">
+        <img src="Assets/Images/photos/bg2.svg" alt="" class="w-full">
+        <div class="absolute md:right-14 top-1/2 container mx-auto flex flex-col items-center w-fit">
+            <p class="text-center text-white">SUNSET AT MOUNT FUJI</p>
+            <p class="mt-4 text-center w-full md:w-72 text-silver hidden md:flex">Duis tristique sed lorem a vestibulum. Cras commodo consequat orci, in convallis risus egestas non.</p>
+        </div>
+        <div class="absolute bottom-2 lg:bottom-8 flex flex-col items-center w-full">
+            <div class="flex justify-center md:justify-end items-center w-full container mx-auto mt-4 md:mt-2">
+                <div class="flex h-4 md:mx-4 mx-2">
+                    <img src="Assets/Images/photos/1.svg" alt="">
+                    <p class="text-white mx-1"><sup>1''</sup></p>
+                </div>
+                <div class="flex h-4 md:mx-4 mx-2">
+                    <img src="Assets/Images/photos/2.svg" alt="">
+                    <p class="text-white mx-1"><sup>f/16</p</sup>
+                </div>
+                <div class="flex h-4 md:mx-4 mx-2">
+                    <img src="Assets/Images/photos/3.svg" alt="">
+                    <p class="text-white mx-1"><sup>400</p></sup>
+                </div>
+                <div class="flex h-4 md:mx-4 mx-2">
+                    <img src="Assets/Images/photos/4.svg" alt="">
+                    <p class="text-white mx-1"><sup>Japan</sup></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row w-full">
+        <div class="w-full md:w-1/2 flex flex-col items-center justify-center md:text-start p-7 md:p-0">
+            <div class="w-full md:w-8/12">
+                <p class="text-silver w-full">THE GEAR CAGE</p>
+                <p class="text-white text-2xl mt-3 w-full">The tools that we use.</p>
+                <p class="text-white mt-4 w-full">The say that "no place is boring if you've had a good night's sleep and have a pocket full of unexposed film". While we don't shoot (a lot) of film these days — these are the tools that we actually use everyday to capture the amazing things around us.</p>
+                <button class="group mt-4 ml:mt-8 flex bg-white rounded-xl items-center border-2 border-white px-3 hover:delay-200 transition-all duration-500 group hover:text-white hover:bg-transparent">
+                    <p class="my-0.5 h-8 w-8 bg-black rounded-full mr-2 group-hover:delay-200 transition-all duration-500 group-hover:bg-white"></p>
+                    <p class="font-bold">Check it out</p>
+                </button>
+            </div>
+        </div>
+        <div class="w-full md:w-1/2 relative hidden md:flex">
+            <img src="Assets/Images/photos/bg3.svg" alt="" class="w-full h-full object-cover">
+            <div class="absolute bottom-2 lg:bottom-8 flex flex-col items-center w-full">
+                <div class="flex justify-center md:justify-end items-center w-full container mx-auto mt-4 md:mt-2">
+                    <div class="flex h-4 md:mx-4 mx-2">
+                        <img src="Assets/Images/photos/1.svg" alt="">
+                        <p class="text-white mx-1"><sup>0.8''</sup></p>
+                    </div>
+                    <div class="flex h-4 md:mx-4 mx-2">
+                        <img src="Assets/Images/photos/2.svg" alt="">
+                        <p class="text-white mx-1"><sup>f/3.5</p</sup>
+                    </div>
+                    <div class="flex h-4 md:mx-4 mx-2">
+                        <img src="Assets/Images/photos/3.svg" alt="">
+                        <p class="text-white mx-1"><sup>100</p></sup>
+                    </div>
+                    <div class="flex h-4 md:mx-4 mx-2">
+                        <img src="Assets/Images/photos/4.svg" alt="">
+                        <p class="text-white mx-1"><sup>Sweden</sup></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full flex flex-col items-center relative">
+        <img src="Assets/Images/photos/bg4.svg" alt="" class="w-full">
+        <div class="absolute md:right-14 top-1/2 container mx-auto flex flex-col items-center w-fit">
+            <p class="text-center text-white">MONSTERA LEAFS</p>
+            <p class="mt-4 text-center w-full md:w-72 text-silver hidden md:flex">Vestibulum sit amet urna turpis. Mauris euismod elit et nisi ultrices, ut faucibus orci tincidunt.</p>
+        </div>
+        <div class="absolute bottom-2 lg:bottom-8 flex flex-col items-center w-full">
+            <div class="flex justify-center md:justify-end items-center w-full container mx-auto mt-4 md:mt-2">
+                <div class="flex h-4 md:mx-4 mx-2">
+                    <img src="Assets/Images/photos/1.svg" alt="">
+                    <p class="text-white mx-1"><sup>1/400s</sup></p>
+                </div>
+                <div class="flex h-4 md:mx-4 mx-2">
+                    <img src="Assets/Images/photos/2.svg" alt="">
+                    <p class="text-white mx-1"><sup>f/3,5</p</sup>
+                </div>
+                <div class="flex h-4 md:mx-4 mx-2">
+                    <img src="Assets/Images/photos/3.svg" alt="">
+                    <p class="text-white mx-1"><sup>100</p></sup>
+                </div>
+                <div class="flex h-4 md:mx-4 mx-2">
+                    <img src="Assets/Images/photos/4.svg" alt="">
+                    <p class="text-white mx-1"><sup>Costa Rica</sup></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto p-2">
+        <p class="text-white text-4xl text-center mt-12 md:mt-24">Past clietns</p>
+        <p class="text-silver text-2xl text-center mt-4">Trusted by your favourite companies</p>
+        <div class="mt-4 md:mt-10 flex flex-col md:flex-row justify-center md:justify-around items-center">
+            <img src="Assets/Images/past_clients/1.svg" alt="" class="my-6 md:my-0">
+            <img src="Assets/Images/past_clients/2.svg" alt="" class="my-6 md:my-0">
+            <img src="Assets/Images/past_clients/3.svg" alt="" class="my-6 md:my-0">
+            <img src="Assets/Images/past_clients/4.svg" alt="" class="my-6 md:my-0">            
+            <img src="Assets/Images/past_clients/5.svg" alt="" class="my-6 md:my-0">            
+        </div>
+    </div>
+
+    <div class="w-full flex flex-col items-center relative">
+        <img src="Assets/Images/photos/bg5.svg" alt="" class="w-full">
+        <div class="absolute md:right-14 top-1/2 container mx-auto flex flex-col items-center w-fit">
+            <p class="text-center text-white">STAR FALL IN THE HIMALAYAS</p>
+            <p class="mt-4 text-center w-full md:w-72 text-silver hidden md:flex">Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex, condimentum dapibus congue et, vulputate ut ligula.</p>
+        </div>
+        <div class="absolute bottom-2 lg:bottom-8 flex flex-col items-center w-full">
+            <div class="flex justify-center md:justify-end items-center w-full container mx-auto mt-4 md:mt-2">
+                <div class="flex h-4 md:mx-4 mx-2">
+                    <img src="Assets/Images/photos/1.svg" alt="">
+                    <p class="text-white mx-1"><sup>6''</sup></p>
+                </div>
+                <div class="flex h-4 md:mx-4 mx-2">
+                    <img src="Assets/Images/photos/2.svg" alt="">
+                    <p class="text-white mx-1"><sup>f/11</p</sup>
+                </div>
+                <div class="flex h-4 md:mx-4 mx-2">
+                    <img src="Assets/Images/photos/3.svg" alt="">
+                    <p class="text-white mx-1"><sup>800</p></sup>
+                </div>
+                <div class="flex h-4 md:mx-4 mx-2">
+                    <img src="Assets/Images/photos/4.svg" alt="">
+                    <p class="text-white mx-1"><sup>Nepal</sup></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto my-24 flex flex-col items-center">
+        <p class="text-center text-4xl text-white lg:w-1/2">Need help with photography or videography?</p>
+        <p class="text-center text-2xl text-silver mt-4">We're here for you!</p>
+        <button class="group mt-4 ml:mt-8 flex bg-white rounded-xl items-center border-2 border-white px-3 hover:delay-200 transition-all duration-500 group hover:text-white hover:bg-transparent">
+            <p class="my-0.5 h-8 w-8 bg-black rounded-full mr-2 group-hover:delay-200 transition-all duration-500 group-hover:bg-white"></p>
+            <p class="font-bold">Get in touch</p>
+        </button>
+    </div>
 
     <footer></footer>
     
