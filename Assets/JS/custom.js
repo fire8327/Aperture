@@ -23,3 +23,11 @@ overlay.addEventListener("click", () => {
   overlay.classList.add("hidden"); 
   body.classList.remove("overflow-hidden"); 
 });
+
+/* preloader */
+const preloader = document.getElementById("preloader");
+window.onload = ()=> {
+  body.classList.remove("overflow-hidden");
+  preloader.classList.add("opacity-0");
+  setTimeout(()=>preloader.classList.add("hidden"), 800);
+};
